@@ -1,14 +1,8 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Magazine veja = new Magazine();
-        veja.setBrand("Veja");
-        veja.setStock(3);
-        veja.setPrice(9.5);
-        Magazine devNews = new Magazine();
-        devNews.setBrand("Dev News");
-        devNews.setPrice(7.5);
-        devNews.setStock(2);
+        Magazine veja = new Magazine("Veja", 3, 9.5);
+        Magazine devNews = new Magazine("Dev News", 2, 7.5);
         Magazine[] magazines = {veja, devNews};
         MagazineStand magazineStand = new MagazineStand();
         magazineStand.setStock(magazines);
@@ -37,6 +31,6 @@ public class Main {
         }
         System.out.println("\nBanca Fechada ( Sem estoque )\n");
         System.out.println(magazineStand.getProfits());
-
+        scan.close();
     }
 }

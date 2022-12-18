@@ -3,7 +3,11 @@ public class Magazine {
     private double price;
     private String brand;
 
-
+    public Magazine(String brand, int stock, double price){
+        this.brand = brand;
+        this.stock = stock;
+        this.price = price;
+    }
     public void setPrice(double price) {
         this.price = price;
     }
